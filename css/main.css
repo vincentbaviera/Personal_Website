@@ -1,0 +1,736 @@
+/* Reset */
+
+body {
+  line-height: 1;
+  background-color: #201c35;
+  height: 100%;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+ a:hover {
+   text-decoration: none;
+   color: #CCC;
+ }
+
+@font-face {
+  font-family: 'AUdimat';
+  src: url('css/fonts/AUdimat-Regular.otf');
+  src: local('AUdimat'), url('css/fonts/AUdimat-Regular.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AUdimat';
+  src: url('css/fonts/AUdimat-Bold.otf');
+  src: local('AUdimat'), url('css/fonts/AUdimat-Bold.otf') format('otf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+/* gestion du texte */
+
+h1 {
+  color: #FFF;
+  font-family: 'AUdimat', "Montserrat";
+  font-weight: bold;
+}
+
+
+/* fin de la gestion du texte */
+
+
+/* Navigation */
+
+.navbar {
+  padding: 0;
+  background-color: #201c35;
+}
+
+.navbar-brand img {
+  height: 80px;
+}
+
+#respNav.collapse.in>.navbar-brand {
+  margin-top: 50px;
+  z-index: 100;
+}
+
+button.navbar-toggler {
+  position: relative;
+  z-index: 100;
+}
+
+button.navbar-toggler i {
+  z-index: 2;
+  position: relative;
+  margin: 5px;
+}
+
+#respNav.collapse.in {
+  background-color: #201c35;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  overflow: hidden;
+}
+
+.navbar-nav {
+  padding-top: 2.5rem;
+  padding-right: 25%;
+  float: right;
+}
+
+a.nav-link {
+  font-family: "Montserrat";
+  font-size: 20px;
+  font-weight: 400;
+  color: #FFF;
+  padding-left: 30px;
+  vertical-align: baseline;
+}
+
+.fa-inverse {
+  color: #FFF;
+}
+.fa-github:hover, .fa-behance:hover, .fa-linkedin:hover, .fa-twitter:hover {
+  color: #0072a1;
+}
+
+
+/* effets pour la nav */
+
+
+/* Effect 1: Brackets */
+
+.cl-effect-1 a::before, .cl-effect-1 a::after {
+  display: inline-block;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+  -webkit-transition: opacity 0.2s, -webkit-transform 0.3s;
+  transition: opacity 0.2s, -webkit-transform 0.3s;
+  transition: transform 0.3s, opacity 0.2s;
+  transition: transform 0.3s, opacity 0.2s, -webkit-transform 0.3s;
+}
+
+.cl-effect-1 a::before {
+  margin-right: 10px;
+  content: '[';
+  -webkit-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+.cl-effect-1 a::after {
+  margin-left: 10px;
+  content: ']';
+  -webkit-transform: translateX(-20px);
+  transform: translateX(-20px);
+}
+
+.cl-effect-1 a:hover::before, .cl-effect-1 a:hover::after, .cl-effect-1 a:focus::before, .cl-effect-1 a:focus::after {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+  transform: translateX(0px);
+}
+
+
+/* Content */
+
+.section1 {
+  margin-top: -200px;
+  margin-left: -15px;
+  margin-right: -15px;
+  height: 1260px;
+  background-color: #201c35;
+}
+
+.section1 img {
+  margin-top: 0;
+}
+
+
+/* Animation */
+
+
+/*.canvasAnimation {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}*/
+
+.socialLinks {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 1000;
+  padding-right: 2rem;
+}
+
+.socialLinks a {
+  color: #201c35;
+}
+
+.socialLinks a:hover {
+  color: #CCC;
+}
+
+
+/* section Projects */
+
+.section2 {
+  background-color: #FFF;
+  margin-left: -15px;
+  margin-right: -15px;
+  padding-top: 3.5rem;
+}
+
+.section2Title {
+  padding: 40px 30px;
+  color: #210c35;
+}
+
+
+/* apparence des projets*/
+
+
+/*.classmtPortfolio{
+  padding-top: 50px;
+}*/
+
+.classmtPortfolio li {
+  position: relative;
+  display: inline-block;
+}
+
+.classmtPortfolio li a, .classmtPortfolio li a img {
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+
+.classmtPortfolio li a {
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.classmtPortfolio li a div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.classmtPortfolio li a span {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-align: center;
+  font-family: AUdimat, arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 22pt;
+  color: #FFF;
+  /* suppression des event hover sur le span */
+  pointer-events: none;
+}
+
+
+/*retour accueil*/
+
+.returnTop img {
+  margin-top: 0;
+  margin-bottom: .8rem;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+
+/* Footer*/
+
+footer>div.container-fluid {
+  margin-top: 40px;
+}
+
+.footerInfo {
+  padding-top: 20px;
+  margin-left: -15px;
+  margin-right: -15px;
+  background-color: #201c35;
+}
+
+.footerInfo ul {
+  padding-left: 10px;
+}
+
+.footerInfo p {
+  color: #FFF;
+}
+
+.footerInfo a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.footerInfo span {
+  color: #FFF;
+  text-decoration: none;
+  line-height: 1.25rem;
+}
+
+
+/* page Talent Day: videos */
+
+.videoNoPadding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+/*Page SVD: videos*/
+
+.videoSVD500 {
+  height: 500px;
+  width: 100%;
+  padding-bottom: 15px;
+}
+
+.videoSVD600 {
+  height: 600px;
+  width: 100%;
+  padding-bottom: 15px;
+}
+
+.videoSVD225 {
+  height: 225px;
+  width: 100%;
+  padding-bottom: 15px;
+}
+
+
+/*PAGE ABOUT*/
+
+.aboutContent {
+  margin-top: 120px;
+  margin-bottom: 30px;
+}
+
+.aboutContent h1 {
+  font-size: 40px;
+  color: #FFF;
+  font-family: "AUdimat";
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.aboutDesc p {
+  font-size: 16px;
+  color: #FFF;
+  font-family: "Montserrat";
+  line-height: 1.3;
+  /*text-align: justify;*/
+}
+
+
+/* PAGEs PROJETS */
+
+.EnteteProjet {
+  padding-top: 150px;
+}
+
+.descPageProjets {
+  padding: 20px 0 20px 0;
+}
+
+.descPageProjets p, span {
+  color: #ccc;
+}
+
+hr {
+  border-color: #FFF;
+  margin: 20px 0 20px 0;
+}
+
+.titleSeparation {
+  text-align: center;
+  font-family: Roboto, open-sans, sans-serif;
+  font-size: 30px;
+  color: #FFF;
+  text-transform: uppercase;
+  /*padding: 25px 0 25px 0;*/
+  margin: 0;
+}
+
+
+/* projets organisation */
+
+.row>div>img {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.row>div:first-child {
+  margin-top: 0;
+}
+
+.row>div:last-child {
+  margin-bottom: 0;
+}
+
+
+/*REPSONSIVE BREAKPOINTS*/
+
+
+/*Small devices (landscape phones, 576px and up)*/
+
+@media (max-width: 767px) {
+  .navbar {
+    background-color: rgba(0, 0, 0, 0) !important;
+  }
+  .navbar-nav {
+    float: none;
+    padding-right: 0;
+  }
+  #respNav.collapse {
+    display: none !important;
+  }
+  #respNav.collapsing {
+    text-align: center;
+    background-color: #201c35;
+    width: 100%;
+    height: 0!important;
+    position: fixed;
+    overflow: hidden;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+  }
+  #respNav.collapsing>a.navbar-brand {
+    margin-top: 30px !important;
+    text-align: center;
+  }
+  /* apparence menu mobile */
+  #respNav.collapse.in {
+    width: 100%;
+    height: 100%;
+    background-color: #201c35;
+    display: block !important;
+  }
+  #respNav.collapse.in>a.navbar-brand {
+    margin-top: 30px !important;
+    text-align: center;
+  }
+  .navbar-nav {
+    padding-left: 0 !important;
+    padding-top: 0 !important;
+  }
+  a.navbar-brand {
+    margin-left: 30px !important;
+  }
+  li.nav-item {
+    padding-left: 0 !important;
+    text-align: center !important;
+    display: block !important;
+  }
+  #projects>div>row:nth-child(1)>ul>li.col-xs-12.col-md-3>a {
+    height: 300px;
+    overflow: hidden;
+  }
+  a.nav-link {
+    padding-right: 0 !important;
+    padding-top: 75px !important;
+  }
+  .socialLinksMobile {
+    padding-top: 1rem;
+    text-align: center;
+  }
+  .socialLinksMobile ul {
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .socialLinksMobile li {
+    display: inline-block;
+    width: auto;
+  }
+
+  .fa-github, .fa-behance, .fa-linkedin, .fa-twitter {
+    color: #201c35;
+  }
+
+  /* Taille section 1 */
+  .section1 {
+    margin-top: 0;
+    height: 400px;
+  }
+  .section1 img {
+    margin-top: 0;
+  }
+  /*Portfolio*/
+  .section2 {
+    padding-top: 1.5rem;
+  }
+  .classmtPortfolio>li {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .classmtPortfolio>li:first-child {
+    margin-top: 0;
+  }
+  .classmtPortfolio>li:last-child {
+    margin-bottom: 0;
+  }
+  /* projets organisation */
+  .EnteteProjet {
+    padding-top: 50px;
+  }
+  .row>div>img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .row>div:first-child {
+    margin-top: 0;
+  }
+  .row>div:last-child {
+    margin-bottom: 0;
+  }
+  /*Talent days*/
+  .videoNoPadding {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  /*SVD*/
+  .videoSVD500 {
+    height: 230px;
+    width: 100%;
+  }
+  .videoSVD600 {
+    height: 230px;
+    width: 100%;
+  }
+  .videoSVD225 {
+    height: 100px;
+    width: 100%;
+  }
+  /* return top*/
+  .returnTop img {
+    width: 15%;
+  }
+  /*Footer*/
+  footer>div.container-fluid {
+    margin-top: 0;
+  }
+  .footerInfo {
+    padding-top: 10px;
+  }
+  footer>div {
+    text-align: center;
+  }
+  .footerText:first-child {
+    margin-bottom: 5px;
+  }
+  .footerText:last-child {
+    margin-top: 5px;
+  }
+  .footerInfo ul {
+    padding-left: 0;
+  }
+}
+
+
+/* Portrait Phone */
+
+@media (max-width: 544px) {
+  .navbar {
+    background-color: rgba(0, 0, 0, 0) !important;
+  }
+  .navbar-nav {
+    float: none;
+    padding-right: 0;
+  }
+  #respNav.collapsing>a.navbar-brand {
+    margin-top: 7rem !important;
+    text-align: center;
+  }
+  /* apparence menu mobile */
+  #respNav.collapse.in {
+    width: 100%;
+    height: 100%;
+    background-color: #201c35;
+  }
+  #respNav.collapse.in>a.navbar-brand {
+    margin-top: 7rem !important;
+    text-align: center;
+  }
+  #projects>div>row:nth-child(1)>ul>li.col-xs-12.col-md-3>a {
+    height: 240px;
+    overflow: hidden;
+  }
+  a.nav-link {
+    padding-left: 0 !important;
+    padding-top: 40px !important;
+  }
+  .socialLinksMobile {
+    padding-top: 3rem;
+    text-align: center;
+  }
+  .socialLinksMobile ul {
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .socialLinksMobile li {
+    display: inline-block;
+    width: auto;
+  }
+  /* Taille section 1 */
+  .section1 {
+    margin-top: 0;
+    height: 250px;
+  }
+  .section1 img {
+    margin-top: 1.5rem;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  /*Portfolio*/
+  .section2 {
+    padding-top: 1.5rem;
+  }
+  .classmtPortfolio>li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .classmtPortfolio>li:first-child {
+    margin-top: 0;
+  }
+  .classmtPortfolio>li:last-child {
+    margin-bottom: 0;
+  }
+  /* projets organisation */
+  .EnteteProjet {
+    padding-top: 50px;
+  }
+  .row>div>img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .row>div:first-child {
+    margin-top: 0;
+  }
+  .row>div:last-child {
+    margin-bottom: 0;
+  }
+  /*Talent days*/
+  .videoNoPadding {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  /*Footer*/
+  footer>div.container-fluid {
+    margin-top: 0;
+  }
+  .footerInfo {
+    padding-top: 10px;
+  }
+  footer>div {
+    text-align: center;
+  }
+  .footerText:first-child {
+    margin-bottom: 5px;
+  }
+  .footerText:last-child {
+    margin-top: 5px;
+  }
+  .footerInfo ul {
+    padding-left: 0;
+  }
+}
+
+
+/*Medium devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar {
+    background-color: #201c35;
+  }
+  .navbar-brand {
+    margin-left: 2%;
+  }
+  .navbar-nav {
+    padding-right: 5%;
+    float: right;
+  }
+  /* Taille section 1 */
+  .section1 {
+    margin-top: 0;
+    height: 500px;
+  }
+  .section1 img {
+    margin-top: -8rem;
+  }
+}
+
+
+/*Large devices (desktops, 992px and up)*/
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .navbar-nav {
+    padding-right: 8.33333%
+  }
+  /* Taille section 1 */
+  .section1 {
+    margin-top: 0;
+    height: 650px;
+  }
+  .section1 img {
+    margin-top: -8rem;
+  }
+}
+
+
+/*Extra large devices (large desktops, 1200px and up)*/
+
+@media (min-width: 1200px) and (max-width: 1620px) {
+  .navbar-nav {
+    padding-right: 16.6666%;
+  }
+  .navbar-brand {
+    margin-left: 12.6666%;
+  }
+  /* Taille section 1 */
+  .section1 {
+    margin-top: 0;
+    height: 870px;
+  }
+  .section1 img {
+    margin-top: -11rem;
+  }
+}
+
+
+/* version 1920 */
+
+@@media (min-width: 1620px) {
+  .navbar-nav {
+    padding-top: 2.5rem;
+    padding-right: 25%;
+    float: right;
+  }
+}
